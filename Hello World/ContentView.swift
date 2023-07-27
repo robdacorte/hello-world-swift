@@ -6,6 +6,25 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+extension View {
+    func glow(color: Color = .blue, radius: CGFloat = 20) -> some View {
+        self
+            .overlay(self.blur(radius: radius / 6))
+            .shadow(color: color, radius: radius / 3)
+            .shadow(color: color, radius: radius / 3)
+            .shadow(color: color, radius: radius / 3)
+    }
+}
+
+//func getMyAudioSession() -> String {
+//
+//    // Retrieve the shared audio session.
+//    let audioSession = AVFoundation.AVAudioSession.sharedInstance()
+//
+//    return "Audio Session outputLatency: \(audioSession.outputLatency)"
+//}
 
 struct ContentView: View {
     init() {}
@@ -17,47 +36,34 @@ struct ContentView: View {
         @State private var isOn: Bool = false
         @State private var lightColor: Color = Color.black
         
+        @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
+                
+//        @State private var audioText: String = getMyAudioSession()
+        
         var body: some View {
-                VStack(spacing: 0) {
-                    ZStack {
-//                        Rectangle()
-//                            .fill(.gray)
-//                            .edgesIgnoringSafeArea(.all)
-                        Rectangle()
-                            .fill(lightColor)
-                            .edgesIgnoringSafeArea(.all)
-//                            .padding(4)
-                        
-                    }
-                    HStack {
-                        Spacer()
-                        Button {
+            
+            
+            VStack(spacing: 0) {
+                ZStack {
+                    Rectangle()
+                        .fill(colorShuffler.lightColor)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
                             powerSwitch()
-                        } label: {
-                            Image(systemName: isOn ? "lightswitch.off" : "lightswitch.on")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 200, height: 60)
-//                                .background(Color.gray)
-                                .animation(.spring(),value:isOn)
-//                                .shadow(color: Color.cyan, radius: 20)
                         }
-                        .buttonStyle(.plain)
-                            Spacer()
-                    }
-                    .background(.gray)
-                    .frame(width: .infinity, height: 20)
+                    Text(colorShuffler.lightColor.description)
+                        .foregroundColor(Color.white)
+                        .font(Font.largeTitle)
+                        .glow(color: .red, radius: 90)
+                    
                 }
+            }
         }
         
         func powerSwitch() {
             isOn = !isOn
             
-            if isOn {
-                lightColor = Color.purple
-            } else {
-                lightColor = Color.black
-            }
+            colorShuffler.fetch(isOn)
         }
     }
 }
