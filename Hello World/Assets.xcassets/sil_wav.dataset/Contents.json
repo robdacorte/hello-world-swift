@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "sil_wav.wav",
+      "idiom" : "universal",
+      "universal-type-identifier" : "WAV"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

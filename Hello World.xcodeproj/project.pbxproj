@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* ColorShuffler.swift */; };
 		0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628646C2A726F380077B6A6 /* PaletteModel.swift */; };
+		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
 		D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */; };
 		D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF42A436173009C57A2 /* ContentView.swift */; };
 		D4EE5BF72A436175009C57A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE5BF62A436175009C57A2 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		060637DB2A5473380070B85E /* ColorShuffler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorShuffler.swift; sourceTree = "<group>"; };
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
 		0628646C2A726F380077B6A6 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteModel.swift; sourceTree = "<group>"; };
+		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
 		D4EE5BEF2A436173009C57A2 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldApp.swift; sourceTree = "<group>"; };
 		D4EE5BF42A436173009C57A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				060637DD2A5DCB380070B85E /* Hello World.entitlements */,
 				D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */,
 				D4EE5BF42A436173009C57A2 /* ContentView.swift */,
+				06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */,
 				060637DB2A5473380070B85E /* ColorShuffler.swift */,
 				0628646C2A726F380077B6A6 /* PaletteModel.swift */,
 				D4EE5BF62A436175009C57A2 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
+				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
 				D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */,
@@ -281,10 +285,12 @@
 				DEVELOPMENT_TEAM = KKY4465MJH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "this app uses microphone to get music decibels";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,10 +318,12 @@
 				DEVELOPMENT_TEAM = KKY4465MJH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "this app uses microphone to get music decibels";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

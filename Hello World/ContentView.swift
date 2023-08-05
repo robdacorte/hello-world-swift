@@ -27,17 +27,27 @@ extension View {
 //}
 
 struct ContentView: View {
-    init() {}
+    @State var audioAnalizer: AudioAnalizer
+    
+    init() {
+        self.audioAnalizer = AudioAnalizer()
+//        self.audioAnalizer?.setupAudio()
+    }
     var body: some View {
-        daBulb()
+        daBulb(audioAnalizer: self.$audioAnalizer)
     }
     
     struct daBulb: View  {
+        @Binding var audioAnalizer: AudioAnalizer
         @State private var isOn: Bool = false
         @State private var lightColor: Color = Color.black
         
         @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
-                
+        
+        
+        @State var currentDate = Date.now
+//        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
 //        @State private var audioText: String = getMyAudioSession()
         
         var body: some View {
@@ -51,10 +61,21 @@ struct ContentView: View {
                         .onTapGesture {
                             powerSwitch()
                         }
-                    Text(colorShuffler.lightColor.description)
-                        .foregroundColor(Color.white)
-                        .font(Font.largeTitle)
-                        .glow(color: .red, radius: 90)
+                    VStack {
+//                        Text("\(currentDate)")
+//                            .onReceive(timer) { input in
+//                                currentDate = input
+//                            }
+//                        Text(colorShuffler.lightColor.description)
+//                            .foregroundColor(Color.white)
+//                            .font(Font.largeTitle)
+//                            .glow(color: .red, radius: 90)
+                        Button {
+                            self.audioAnalizer.keepRolling()
+                        } label: {
+                            Label("Tap To Action", image: "pencil")
+                        }
+                    }
                     
                 }
             }
