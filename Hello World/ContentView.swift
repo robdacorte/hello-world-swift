@@ -56,11 +56,9 @@ struct ContentView: View {
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
-                        .fill(colorShuffler.lightColor)
+                        .fill(colorShuffler.switchColorAnimation ? colorShuffler.firstColor : colorShuffler.secondColor)
                         .edgesIgnoringSafeArea(.all)
-                        .onTapGesture {
-                            powerSwitch()
-                        }
+                        .animation(.easeInOut(duration: colorShuffler.transitionSpeed), value: colorShuffler.switchColorAnimation)
                     VStack {
 //                        Text("\(currentDate)")
 //                            .onReceive(timer) { input in
@@ -70,10 +68,22 @@ struct ContentView: View {
 //                            .foregroundColor(Color.white)
 //                            .font(Font.largeTitle)
 //                            .glow(color: .red, radius: 90)
+                        Spacer()
                         Button {
-                            self.audioAnalizer.keepRolling()
+                            powerSwitch()
                         } label: {
-                            Label("Tap To Action", image: "pencil")
+                            Label( isOn ? "Tap to Stop" : "Tap to Play", systemImage: isOn ? "stop.fill" : "play.fill")
+                        }
+                        .buttonStyle(.borderedProminent)
+                        Picker("Choose a color palette", selection: $colorShuffler.colorPalette) {
+                            ForEach(Palettes.allCases) { palette in
+                                Text("\(palette.name)").tag(palette)
+                            }
+                        }
+                        Picker("Choose the transition speed", selection: $colorShuffler.transitionSpeed) {
+                            ForEach(1..<10) { number in
+                                Text("\(number.description) s").tag(Double(number))
+                            }
                         }
                     }
                     
@@ -83,8 +93,8 @@ struct ContentView: View {
         
         func powerSwitch() {
             isOn = !isOn
-            
             colorShuffler.fetch(isOn)
+            
         }
     }
 }
