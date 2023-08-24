@@ -11,14 +11,23 @@ import SwiftUI
 class ColorShuffler: NSObject, ObservableObject {
     var timer: Timer?
     var currentIndex: Int = 0
+    var colorPalette: Palettes = .shadesOfTeal
     @Published var lightColor: Color = Color.black
     
-    let colorPalette: Palettes = .shadesOfTeal
-//    let colorPalette: Palettes = .beach
-//    let colorPalette: Palettes = .neonColors
+    func setColorPalette(palette: Palettes) -> Void {
+        self.colorPalette = palette
+        self.fetch(true)
+    }
+    
+    func getColorPalette() -> Palettes {
+        self.colorPalette
+    }
     
     func fetch(_ isOn: Bool = false) -> Void {
         let lengthInSeconds: TimeInterval = 1
+        
+        // When set to true, this means the screen will never dim or go to sleep
+        UIApplication.shared.isIdleTimerDisabled = isOn
         
         timer?.invalidate()
         if isOn {

@@ -18,37 +18,18 @@ extension View {
     }
 }
 
-//func getMyAudioSession() -> String {
-//
-//    // Retrieve the shared audio session.
-//    let audioSession = AVFoundation.AVAudioSession.sharedInstance()
-//
-//    return "Audio Session outputLatency: \(audioSession.outputLatency)"
-//}
 
 struct ContentView: View {
-    @State var audioAnalizer: AudioAnalizer
-    
-    init() {
-        self.audioAnalizer = AudioAnalizer()
-//        self.audioAnalizer?.setupAudio()
-    }
     var body: some View {
-        daBulb(audioAnalizer: self.$audioAnalizer)
+        daBulb()
     }
     
     struct daBulb: View  {
-        @Binding var audioAnalizer: AudioAnalizer
         @State private var isOn: Bool = false
-        @State private var lightColor: Color = Color.black
-        
         @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
         
+        @State private var buttonsArrayView: [ExpandableButtonItem] = Array()
         
-        @State var currentDate = Date.now
-//        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-//        @State private var audioText: String = getMyAudioSession()
         
         var body: some View {
             
@@ -58,27 +39,49 @@ struct ContentView: View {
                     Rectangle()
                         .fill(colorShuffler.lightColor)
                         .edgesIgnoringSafeArea(.all)
+                        .onTapGesture(count: 2) {
+                            resetColorShuffler()
+                        }
                         .onTapGesture {
                             powerSwitch()
                         }
-                    VStack {
-//                        Text("\(currentDate)")
-//                            .onReceive(timer) { input in
-//                                currentDate = input
-//                            }
-//                        Text(colorShuffler.lightColor.description)
-//                            .foregroundColor(Color.white)
-//                            .font(Font.largeTitle)
-//                            .glow(color: .red, radius: 90)
-                        Button {
-                            self.audioAnalizer.keepRolling()
-                        } label: {
-                            Label("Tap To Action", image: "pencil")
+                    VStack{
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            ExpandableButtonPanel(primaryButton: ExpandableButtonItem(label: Image(systemName: "ellipsis")
+                                                                                     ), secondaryButtons: [
+                                                                                        ExpandableButtonItem(label: Image(systemName: "ellipsis"), palette: .shadesOfTeal, action: {
+                                                                                            colorShuffler.setColorPalette(palette: .shadesOfTeal)
+                                                                                        }),
+                                                                                        ExpandableButtonItem(label: Image(systemName: "photo"), palette: .neonColors, action: {
+                                                                                            colorShuffler.setColorPalette(palette: .neonColors)
+                                                                                        }),
+                                                                                        ExpandableButtonItem(label: Image(systemName: "camera"), palette: .beach, action: {
+                                                                                            colorShuffler.setColorPalette(palette: .beach)
+                                                                                        })
+                                                                                     ])
+                            .padding()
                         }
                     }
-                    
                 }
             }
+        }
+        
+//        func fillButtons() {
+//            ForEach(Palettes.allCases, id: \.self) { Palette in
+//                var current: ExpandableButtonItem = ExpandableButtonItem( label: Image(systemName: "ellipsis"), palette: Palette, action: {
+//                    colorShuffler.setColorPalette(palette: Palette)
+//                })
+//                    buttonsArrayView.append(current)
+//
+//            }
+//        }
+        
+        func resetColorShuffler() {
+            isOn = false
+            colorShuffler.fetch(isOn)
+            colorShuffler.lightColor = .black
         }
         
         func powerSwitch() {
