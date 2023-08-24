@@ -8,10 +8,20 @@
 import Foundation
 import SwiftUI
 
-enum Palettes {
+enum Palettes: Identifiable, CaseIterable {
     case shadesOfTeal
     case beach
     case neonColors
+    
+    var id: Self { self }
+    
+    var name: String {
+        switch self {
+        case .shadesOfTeal: return "Shade of Teal"
+        case .beach: return "Beach"
+        case .neonColors: return "Neon Colors"
+        }
+    }
     
     var colors: [Color] {
         switch self {

@@ -37,8 +37,9 @@ struct ContentView: View {
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
-                        .fill(colorShuffler.lightColor)
+                        .fill(colorShuffler.switchColorAnimation ? colorShuffler.firstColor : colorShuffler.secondColor)
                         .edgesIgnoringSafeArea(.all)
+                        .animation(.easeInOut(duration: colorShuffler.transitionSpeed), value: colorShuffler.switchColorAnimation)
                         .onTapGesture(count: 2) {
                             resetColorShuffler()
                         }
@@ -62,21 +63,28 @@ struct ContentView: View {
                                                                                         })
                                                                                      ])
                             .padding()
-                        }
-                    }
+
                 }
+
+                        Button {
+                            powerSwitch()
+                        } label: {
+                            Label( isOn ? "Tap to Stop" : "Tap to Play", systemImage: isOn ? "stop.fill" : "play.fill")
+                        }
+                        .buttonStyle(.borderedProminent)
+                        Picker("Choose a color palette", selection: $colorShuffler.colorPalette) {
+                            ForEach(Palettes.allCases) { palette in
+                                Text("\(palette.name)").tag(palette)
+                            }
+                        }
+                        Picker("Choose the transition speed", selection: $colorShuffler.transitionSpeed) {
+                            ForEach(1..<10) { number in
+                                Text("\(number.description) s").tag(Double(number))
+                            }
+                        }
             }
         }
         
-//        func fillButtons() {
-//            ForEach(Palettes.allCases, id: \.self) { Palette in
-//                var current: ExpandableButtonItem = ExpandableButtonItem( label: Image(systemName: "ellipsis"), palette: Palette, action: {
-//                    colorShuffler.setColorPalette(palette: Palette)
-//                })
-//                    buttonsArrayView.append(current)
-//
-//            }
-//        }
         
         func resetColorShuffler() {
             isOn = false
@@ -86,8 +94,8 @@ struct ContentView: View {
         
         func powerSwitch() {
             isOn = !isOn
-            
             colorShuffler.fetch(isOn)
+            
         }
     }
 }
