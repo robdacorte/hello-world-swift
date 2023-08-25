@@ -25,77 +25,49 @@ struct ContentView: View {
     }
     
     struct daBulb: View  {
-        @State private var isOn: Bool = false
         @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
         
         @State private var buttonsArrayView: [ExpandableButtonItem] = Array()
         
-        
         var body: some View {
-            
-            
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
                         .fill(colorShuffler.switchColorAnimation ? colorShuffler.firstColor : colorShuffler.secondColor)
                         .edgesIgnoringSafeArea(.all)
                         .animation(.easeInOut(duration: colorShuffler.transitionSpeed), value: colorShuffler.switchColorAnimation)
-                        .onTapGesture(count: 2) {
-                            resetColorShuffler()
-                        }
                         .onTapGesture {
-                            powerSwitch()
+                            colorShuffler.togglePower()
                         }
                     VStack{
                         Spacer()
                         HStack{
                             Spacer()
-                            ExpandableButtonPanel(primaryButton: ExpandableButtonItem(label: Image(systemName: "ellipsis")
-                                                                                     ), secondaryButtons: [
-                                                                                        ExpandableButtonItem(label: Image(systemName: "ellipsis"), palette: .shadesOfTeal, action: {
-                                                                                            colorShuffler.setColorPalette(palette: .shadesOfTeal)
-                                                                                        }),
-                                                                                        ExpandableButtonItem(label: Image(systemName: "photo"), palette: .neonColors, action: {
-                                                                                            colorShuffler.setColorPalette(palette: .neonColors)
-                                                                                        }),
-                                                                                        ExpandableButtonItem(label: Image(systemName: "camera"), palette: .beach, action: {
-                                                                                            colorShuffler.setColorPalette(palette: .beach)
-                                                                                        })
-                                                                                     ])
+                            ExpandableButtonPanelFixed(colorShuffler: colorShuffler)
                             .padding()
-
-                }
-
+                            
+                        }
+                        
                         Button {
-                            powerSwitch()
+                            colorShuffler.togglePower()
                         } label: {
-                            Label( isOn ? "Tap to Stop" : "Tap to Play", systemImage: isOn ? "stop.fill" : "play.fill")
+                            Label( colorShuffler.isOn ? "Tap to Stop" : "Tap to Play", systemImage: colorShuffler.isOn ? "stop.fill" : "play.fill")
                         }
                         .buttonStyle(.borderedProminent)
-                        Picker("Choose a color palette", selection: $colorShuffler.colorPalette) {
-                            ForEach(Palettes.allCases) { palette in
-                                Text("\(palette.name)").tag(palette)
-                            }
-                        }
+//                        Picker("Choose a color palette", selection: $colorShuffler.colorPalette) {
+//                            ForEach(Palettes.allCases) { palette in
+//                                Text("\(palette.name)").tag(palette)
+//                            }
+//                        }
                         Picker("Choose the transition speed", selection: $colorShuffler.transitionSpeed) {
                             ForEach(1..<10) { number in
                                 Text("\(number.description) s").tag(Double(number))
                             }
                         }
+                    }
+                }
+                
             }
-        }
-        
-        
-        func resetColorShuffler() {
-            isOn = false
-            colorShuffler.fetch(isOn)
-            colorShuffler.lightColor = .black
-        }
-        
-        func powerSwitch() {
-            isOn = !isOn
-            colorShuffler.fetch(isOn)
-            
         }
     }
 }

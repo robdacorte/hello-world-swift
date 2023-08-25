@@ -12,6 +12,7 @@ enum Palettes: Identifiable, CaseIterable {
     case shadesOfTeal
     case beach
     case neonColors
+    case aetherpunk
     
     var id: Self { self }
     
@@ -20,6 +21,7 @@ enum Palettes: Identifiable, CaseIterable {
         case .shadesOfTeal: return "Shade of Teal"
         case .beach: return "Beach"
         case .neonColors: return "Neon Colors"
+        case .aetherpunk: return "Aether Punk"
         }
     }
     
@@ -48,6 +50,14 @@ enum Palettes: Identifiable, CaseIterable {
                 Color(red:255/255, green:231/255, blue:0),
                 Color(red:240/255, green:0, blue:255/255),
                 Color(red:0, green:30/255, blue:255/255)
+            ]
+        case .aetherpunk:
+            return [
+                Color(red:233/255, green:214/255, blue:107/255),
+                Color(red:240/255, green:220/255, blue:130/255),
+                Color(red:204/255, green:153/255, blue:0),
+                Color(red:46/255, green:45/255, blue:136/255),
+                Color(red:194/255, green:59/255, blue:34/255)
             ]
         }
     }

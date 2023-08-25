@@ -12,38 +12,36 @@ import Combine
 class ColorShuffler: NSObject, ObservableObject {
     var timer: Timer?
     var currentIndex: Int = 0
-    var colorPalette: Palettes = .shadesOfTeal
-    @Published var lightColor: Color = Color.black
     
-    func setColorPalette(palette: Palettes) -> Void {
-        self.colorPalette = palette
-        self.fetch(true)
-    }
-    
-    func getColorPalette() -> Palettes {
-        self.colorPalette
-    }
-    private var currentIndex: Int = 0
     private var currentTime: Int = 0
+    
+    @Published var isOn: Bool = false
     @Published var firstColor: Color = .black
     @Published var secondColor: Color = .white
     @Published var switchColorAnimation: Bool = false
     @Published var colorPalette: Palettes = .shadesOfTeal
     @Published var transitionSpeed: Double = 1.0
-    private var cancellable = Set<AnyCancellable>()
-//    let colorPalette: Palettes = .beach
-//    let colorPalette: Palettes = .neonColors
+    
+    func setColorPalette(palette: Palettes) -> Void {
+        self.colorPalette = palette
+        self.isOn = false
+        self.togglePower()
+    }
+    func getColorPalette() -> Palettes {
+        self.colorPalette
+    }
 
     
-    func fetch(_ isOn: Bool = false) -> Void {
+    func togglePower() -> Void {
         let lengthInSeconds: TimeInterval = TimeInterval(floatLiteral: transitionSpeed)
+        self.isOn = !self.isOn
         
         // When set to true, this means the screen will never dim or go to sleep
-        UIApplication.shared.isIdleTimerDisabled = isOn
+        UIApplication.shared.isIdleTimerDisabled = self.isOn
         
         timer?.invalidate()
-        if isOn {
-            timer = Timer.scheduledTimer(withTimeInterval: lengthInSeconds, repeats: false) { timer in
+        if self.isOn {
+            timer = Timer.scheduledTimer(withTimeInterval: lengthInSeconds, repeats: true) { timer in
                 self.firstColor = self.colorPalette.colors[self.currentIndex]
                 self.secondColor = self.colorPalette.colors[self.getSecondaryIndex(currentIndex: self.currentIndex)]
 
@@ -53,13 +51,14 @@ class ColorShuffler: NSObject, ObservableObject {
                     self.updateCurrentIndex()
                 }
                 
-                self.fetch(true)
                 self.currentTime += 1
             }
         } else {
             timer?.invalidate()
             timer = nil
-            switchColorAnimation = false
+            switchColorAnimation = self.isOn
+            firstColor = .black
+            secondColor = .black
         }
     }
     
@@ -75,7 +74,6 @@ class ColorShuffler: NSObject, ObservableObject {
         if (currentIndex + 1  > colorPalette.colors.count - 1) {
             return 0
         }
-        print(currentIndex + 1)
         return currentIndex + 1
     }
 }
