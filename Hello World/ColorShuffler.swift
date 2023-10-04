@@ -22,6 +22,46 @@ class ColorShuffler: NSObject, ObservableObject {
     @Published var colorPalette: Palettes = .shadesOfTeal
     @Published var transitionSpeed: Double = 1.0
     
+    var randomInt: Int = 0
+
+    func getRandomInt() -> Int {
+        return Int.random(in: 1..<5)
+    }
+    
+    
+    
+    func toggleColoredPulse() -> Void {
+        let lengthInSeconds: TimeInterval = TimeInterval(floatLiteral: 0.5)
+        self.isOn = !self.isOn
+        
+        // When set to true, this means the screen will never dim or go to sleep
+        UIApplication.shared.isIdleTimerDisabled = self.isOn
+        
+        timer?.invalidate()
+        if self.isOn {
+            timer = Timer.scheduledTimer(withTimeInterval: lengthInSeconds, repeats: true) { timer in
+                self.randomInt = self.getRandomInt()
+                print(self.randomInt)
+                self.firstColor = self.colorPalette.colors[self.randomInt]
+                self.secondColor = self.colorPalette.colors[self.getSecondaryIndex(currentIndex: self.randomInt)]
+
+                self.switchColorAnimation = !self.switchColorAnimation
+                
+                if self.currentTime % 2 != 0 {
+                    self.updateCurrentIndex()
+                }
+                
+                self.currentTime += 1
+            }
+        } else {
+            timer?.invalidate()
+            timer = nil
+            switchColorAnimation = self.isOn
+            firstColor = .black
+            secondColor = .black
+        }
+    }
+    
     func setColorPalette(palette: Palettes) -> Void {
         self.colorPalette = palette
         self.isOn = false
@@ -77,3 +117,10 @@ class ColorShuffler: NSObject, ObservableObject {
         return currentIndex + 1
     }
 }
+
+
+/*
+ a palette has 5 colors
+ 
+ 
+ */
