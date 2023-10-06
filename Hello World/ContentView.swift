@@ -83,7 +83,7 @@ struct ContentView: View {
 }
 
 struct musicLamp: View  {
-    @State private var audioAnalizer: AudioAnalizer = AudioAnalizer()
+    @ObservedObject private var audioAnalizer: AudioAnalizer = AudioAnalizer()
     
     @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
     
