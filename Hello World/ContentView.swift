@@ -114,14 +114,14 @@ struct musicLamp: View  {
                     
                     
                     Button {
-                        audioAnalizer.stopRecording()
+                        audioAnalizer.outterStop()
                     } label: {
                         Label("Tap to stop", systemImage: "stop.fill")
                     }
                     .buttonStyle(.borderedProminent)
                     
                     Button {
-                        audioAnalizer.startRecording()
+                        audioAnalizer.outterStart()
                     } label: {
                         Label("Tap to Record", systemImage: "mic.fill")
                     }
