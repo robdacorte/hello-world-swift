@@ -16,50 +16,18 @@ class ColorShuffler: NSObject, ObservableObject {
     private var currentTime: Int = 0
     
     @Published var isOn: Bool = false
-    @Published var firstColor: Color = .black
-    @Published var secondColor: Color = .white
+    @Published var firstColor: Color = .gray
+    @Published var secondColor: Color = .black
     @Published var switchColorAnimation: Bool = false
     @Published var colorPalette: Palettes = .shadesOfTeal
     @Published var transitionSpeed: Double = 1.0
+    @Published var isShuffleOn: Bool = false
+    @Published var isSpeedPickerOn: Bool = false
     
     var randomInt: Int = 0
 
     func getRandomInt() -> Int {
         return Int.random(in: 1..<5)
-    }
-    
-    
-    
-    func toggleColoredPulse() -> Void {
-        let lengthInSeconds: TimeInterval = TimeInterval(floatLiteral: 0.5)
-        self.isOn = !self.isOn
-        
-        // When set to true, this means the screen will never dim or go to sleep
-        UIApplication.shared.isIdleTimerDisabled = self.isOn
-        
-        timer?.invalidate()
-        if self.isOn {
-            timer = Timer.scheduledTimer(withTimeInterval: lengthInSeconds, repeats: true) { timer in
-                self.randomInt = self.getRandomInt()
-                print(self.randomInt)
-                self.firstColor = self.colorPalette.colors[self.randomInt]
-                self.secondColor = self.colorPalette.colors[self.getSecondaryIndex(currentIndex: self.randomInt)]
-
-                self.switchColorAnimation = !self.switchColorAnimation
-                
-                if self.currentTime % 2 != 0 {
-                    self.updateCurrentIndex()
-                }
-                
-                self.currentTime += 1
-            }
-        } else {
-            timer?.invalidate()
-            timer = nil
-            switchColorAnimation = self.isOn
-            firstColor = .black
-            secondColor = .black
-        }
     }
     
     func setColorPalette(palette: Palettes) -> Void {
@@ -71,6 +39,12 @@ class ColorShuffler: NSObject, ObservableObject {
         self.colorPalette
     }
 
+    func toggleShuffle() -> Void {
+        self.isShuffleOn.toggle()
+    }
+    func toggleSpeedPicker() -> Void {
+        self.isSpeedPickerOn.toggle()
+    }
     
     func togglePower() -> Void {
         let lengthInSeconds: TimeInterval = TimeInterval(floatLiteral: transitionSpeed)
@@ -82,12 +56,13 @@ class ColorShuffler: NSObject, ObservableObject {
         timer?.invalidate()
         if self.isOn {
             timer = Timer.scheduledTimer(withTimeInterval: lengthInSeconds, repeats: true) { timer in
-                self.firstColor = self.colorPalette.colors[self.currentIndex]
-                self.secondColor = self.colorPalette.colors[self.getSecondaryIndex(currentIndex: self.currentIndex)]
+                self.randomInt = self.getRandomInt()
+                self.firstColor = self.colorPalette.colors[self.isShuffleOn ? self.randomInt : self.currentIndex]
+                self.secondColor = self.colorPalette.colors[self.getSecondaryIndex(currentIndex: self.isShuffleOn ? self.randomInt : self.currentIndex)]
 
                 self.switchColorAnimation = !self.switchColorAnimation
                 
-                if self.currentTime % 2 != 0 {
+                if !self.isShuffleOn && self.currentTime % 2 != 0 {
                     self.updateCurrentIndex()
                 }
                 
@@ -103,6 +78,7 @@ class ColorShuffler: NSObject, ObservableObject {
     }
     
     private func updateCurrentIndex() {
+        
         if self.currentIndex == self.colorPalette.colors.count - 1 {
             self.currentIndex = 0
         } else {

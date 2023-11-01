@@ -10,6 +10,11 @@
 		060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* ColorShuffler.swift */; };
 		0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628646C2A726F380077B6A6 /* PaletteModel.swift */; };
 		06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */; };
+		06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* SoundLamp.swift */; };
+		06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* DefaultLamp.swift */; };
+		06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4642AF2534500608D3F /* View+Ext.swift */; };
+		06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsView.swift */; };
+		06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationLamp.swift */; };
 		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
 		D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */; };
 		D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF42A436173009C57A2 /* ContentView.swift */; };
@@ -22,6 +27,11 @@
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
 		0628646C2A726F380077B6A6 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteModel.swift; sourceTree = "<group>"; };
 		06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableButtonPanel.swift; sourceTree = "<group>"; };
+		06BFC45F2AF2527100608D3F /* SoundLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLamp.swift; sourceTree = "<group>"; };
+		06BFC4612AF252EB00608D3F /* DefaultLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLamp.swift; sourceTree = "<group>"; };
+		06BFC4642AF2534500608D3F /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		06BFC4662AF2570500608D3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		06BFC4682AF257C100608D3F /* MeditationLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLamp.swift; sourceTree = "<group>"; };
 		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
 		D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello WorldDebug.entitlements"; sourceTree = "<group>"; };
 		D4EE5BEF2A436173009C57A2 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06BFC4632AF2532300608D3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06BFC4642AF2534500608D3F /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D4EE5BE62A436173009C57A2 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +81,14 @@
 			children = (
 				D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */,
 				060637DD2A5DCB380070B85E /* Hello World.entitlements */,
+				06BFC4632AF2532300608D3F /* Extensions */,
 				D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */,
 				06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */,
 				D4EE5BF42A436173009C57A2 /* ContentView.swift */,
+				06BFC4612AF252EB00608D3F /* DefaultLamp.swift */,
+				06BFC4662AF2570500608D3F /* SettingsView.swift */,
+				06BFC45F2AF2527100608D3F /* SoundLamp.swift */,
+				06BFC4682AF257C100608D3F /* MeditationLamp.swift */,
 				06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */,
 				060637DB2A5473380070B85E /* ColorShuffler.swift */,
 				0628646C2A726F380077B6A6 /* PaletteModel.swift */,
@@ -155,6 +178,11 @@
 			files = (
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
+				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
+				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
+				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
+				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
+				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
 				0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
 				06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */,
@@ -320,10 +348,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hello World/Hello World.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hello World/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KKY4465MJH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";

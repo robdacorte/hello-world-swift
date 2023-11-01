@@ -3,13 +3,13 @@ import AVFoundation
 import UIKit
 
 
-class AudioAnalizer: NSObject, AVAudioRecorderDelegate {
+class AudioAnalizer: NSObject, AVAudioRecorderDelegate, ObservableObject {
     var audioSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var player: AVAudioPlayer!
     var isRecording: Bool = false
-    var currentPulseDb0: Float = 0
-    var currentPulsePk0: Float = 0
+    @Published var currentPulseDb0: Float = 0
+    @Published var currentPulsePk0: Float = 0
     
     private var recorder : AVAudioRecorder!
     private var timer: Timer?
