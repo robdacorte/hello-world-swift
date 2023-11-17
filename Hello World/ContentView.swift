@@ -12,15 +12,48 @@ struct ContentView: View {
     
     @State private var selectedView: Int = 1
     
+    private let marginBottom: CGFloat = 60
+    
     var body: some View {
-        TabView {
-            DefaultLamp().tag(1).tabItem { Label("Default", systemImage: "house") }
-            SoundLamp().tag(2).tabItem { Label("Wave", systemImage: "waveform.path") }
-            
-            // todo
-            MeditationLamp().tag(3).tabItem { Label("Meditation", systemImage: "figure.mind.and.body") }
-            SettingsView().tag(4).tabItem { Label("Settings and Help", systemImage: "gear") }
+        ZStack {
+            TabView(selection: $selectedView) {
+                DefaultLamp().tag(1)
+                SoundLamp().tag(2)
+                MeditationLamp().tag(3)
+                SettingsView().tag(4)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+
+            VStack {
+                Spacer()
+                HStack(spacing: 0) {
+                    TabViewLink($selectedView: $selectedView, selectedViewId: 1, image: "house.fill", title: "Default")
+                    TabViewLink($selectedView: $selectedView, selectedViewId: 2,image: "waveform.path", title: "Wave")
+                    TabViewLink($selectedView: $selectedView, selectedViewId: 3 , image: "figure.mind.and.body", title: "Meditation")
+                    TabViewLink($selectedView: $selectedView, selectedViewId: 4 , image: "gear", title: "Settings")
+                }
+                .padding(.bottom, 40)
+            }
+            .frame(maxWidth: .infinity)
         }
+        .ignoresSafeArea()
+    }
+    
+    @ViewBuilder
+    func TabViewLink(@Binding selectedView: Int, selectedViewId:Int, image:String, title: String) -> some View {
+        Button {
+            selectedView = selectedViewId
+        } label: {
+            VStack {
+                Image(systemName: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 20)
+                Text(title)
+                    .font(.footnote)
+                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+            }
+        }.tabButtonWidth()
     }
 }
 

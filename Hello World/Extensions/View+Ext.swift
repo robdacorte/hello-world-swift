@@ -15,4 +15,10 @@ extension View {
             .shadow(color: color, radius: radius / 3)
             .shadow(color: color, radius: radius / 3)
     }
+    func paddingBottom() -> some  View {
+        modifier(PaddingBottom())
+    }
+    func tabButtonWidth() -> some View {
+        modifier(WidthButtonModifier())
+    }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DefaultLamp: View  {
+    
     @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
     
     @State private var buttonsArrayView: [ExpandableButtonItem] = Array()
@@ -83,8 +84,8 @@ struct DefaultLamp: View  {
                         
                     }
                 }
+                .paddingBottom()
             }
-            
         }
     }
 }

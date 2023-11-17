@@ -16,6 +16,8 @@
 		06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsView.swift */; };
 		06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationLamp.swift */; };
 		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
+		D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */; };
+		D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */; };
 		D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */; };
 		D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF42A436173009C57A2 /* ContentView.swift */; };
 		D4EE5BF72A436175009C57A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE5BF62A436175009C57A2 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		06BFC4662AF2570500608D3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		06BFC4682AF257C100608D3F /* MeditationLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLamp.swift; sourceTree = "<group>"; };
 		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
+		D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBottomModifier.swift; sourceTree = "<group>"; };
+		D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthButtonModifier.swift; sourceTree = "<group>"; };
 		D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello WorldDebug.entitlements"; sourceTree = "<group>"; };
 		D4EE5BEF2A436173009C57A2 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldApp.swift; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D408B32E2B07BD0000A11E5E /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */,
+				D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		D4EE5BE62A436173009C57A2 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,7 @@
 		D4EE5BF12A436173009C57A2 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				D408B32E2B07BD0000A11E5E /* Modifiers */,
 				D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */,
 				060637DD2A5DCB380070B85E /* Hello World.entitlements */,
 				06BFC4632AF2532300608D3F /* Extensions */,
@@ -177,12 +191,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
+				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
 				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
 				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
+				D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */,
 				0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
 				06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */,

@@ -86,6 +86,7 @@ struct SoundLamp: View  {
                         }
                     }
                 }
+                .paddingBottom()
             }
             
         }
