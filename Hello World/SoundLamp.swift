@@ -9,89 +9,63 @@ import SwiftUI
 
 
 struct SoundLamp: View  {
-    @ObservedObject private var audioAnalizer: AudioAnalizer = AudioAnalizer()
-    
-    @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
-    
-    @State private var buttonsArrayView: [ExpandableButtonItem] = Array()
-    
-    @State private var offsetY: CGFloat = 0
-    
+    @State private var startTime = Date.now
+
     var body: some View {
-        VStack(spacing: 0) {
-            ZStack {
-                Rectangle()
-                    .fill(colorShuffler.switchColorAnimation ? colorShuffler.firstColor : colorShuffler.secondColor)
-                    .edgesIgnoringSafeArea(.all)
-                //                    .animation(.easeInOut(duration: colorShuffler.transitionSpeed), value: colorShuffler.switchColorAnimation)
-                    .onTapGesture {
-                        colorShuffler.togglePower()
-                    }
-                VStack{
-                    Spacer()
-                    Circle()
-                        .fill(.blue)
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                        .offset(y:-(offsetY + CGFloat(audioAnalizer.currentPulseDb0 * 2)))
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/, value: audioAnalizer.currentPulseDb0)
-                    Text("\(audioAnalizer.currentPulseDb0)")
-                        .font(.title)
-                    Text("\(audioAnalizer.currentPulsePk0)")
-                        .font(.title)
-                    HStack{
-                        Spacer()
-                        ExpandableButtonPanelFixed(colorShuffler: colorShuffler)
-                            .padding()
-                        
-                    }
-                    
-                    
-                    Button {
-                        audioAnalizer.outterStop()
-                    } label: {
-                        Label("Tap to stop", systemImage: "stop.fill")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    
-                    Button {
-                        audioAnalizer.outterStart()
-                    } label: {
-                        Label("Tap to Record", systemImage: "mic.fill")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    
-                    Button {
-                        colorShuffler.togglePower()
-                    } label: {
-                        Label( colorShuffler.isOn ? "Tap to Stop" : "Tap to Play", systemImage: colorShuffler.isOn ? "stop.fill" : "play.fill")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    
-                    Button {
-                        colorShuffler.toggleShuffle()
-                    } label: {
-                        Label( colorShuffler.isOn ? "Stop Random Pulse" : "Play Random Pulse", systemImage: colorShuffler.isOn ? "stop.fill" : "play.fill")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    //                        Picker("Choose a color palette", selection: $colorShuffler.colorPalette) {
-                    //                            ForEach(Palettes.allCases) { palette in
-                    //                                Text("\(palette.name)").tag(palette)
-                    //                            }
-                    //                        }
-                    Picker("Choose the transition speed", selection: $colorShuffler.transitionSpeed) {
-                        Text(".1 s").tag(Double(0.1))
-                        Text(".5 s").tag(Double(0.5))
-                        ForEach(1..<10) { number in
-                            Text("\(number.description) s").tag(Double(number))
-                        }
-                    }
+        TimelineView(.animation) { timeline in
+            let elapsedTime = startTime.distance(to: timeline.date)
+
+//            Image(systemName: "circle.fill")
+//                .font(.system(size: 300))
+//                .padding()
+//                .drawingGroup()
+//                .visualEffect { content, proxy in
+//                    content
+//                        .colorEffect(
+//                            ShaderLibrary.circleWave(
+//                                .float2(proxy.size),
+//                                .float(elapsedTime),
+//                                .float(0.5),
+//                                .float(1),
+//                                .float(2),
+//                                .float(100),
+//                                .float2(0.5, 0.5),
+//                                .color(.blue)
+//                            )
+//                        )
+//                        //.offset(x: (proxy.size.width <= elapsedTime * 10 ) ? elapsedTime * 10 : elapsedTime * -10, y: 0)
+//                        .offset(x: ((cos(elapsedTime) <= 0 )) ? cos(elapsedTime) * 50 : cos(elapsedTime) * -50, y: (sin(elapsedTime) <= 0 ) ? sin(elapsedTime) * 70 : sin(elapsedTime) * -70)
+//                }
+            
+            Image(systemName: "circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: UIScreen.main.bounds.height * 2)
+                .padding()
+                .drawingGroup()
+                .visualEffect { content, proxy in
+                    content
+                        .colorEffect(
+                            ShaderLibrary.circleWave(
+                                .float2(proxy.size),
+                                .float(elapsedTime),
+                                .float(0.2),
+                                .float(0.3), // Wave timing
+                                .float(2), // Brightness
+                                .float(100), // Seed speed
+                                .float2(0.5, 0.5),
+                                .color(.orange)
+                            )
+                        )
+                        //.offset(x: (proxy.size.width <= elapsedTime * 10 ) ? elapsedTime * 10 : elapsedTime * -10, y: 0)
+                        .offset(x: ((cos(elapsedTime) <= 0 )) ? cos(elapsedTime) * 50 : cos(elapsedTime) * -50, y: (sin(elapsedTime) <= 0 ) ? sin(elapsedTime) * 70 : sin(elapsedTime) * -70)
                 }
-                .paddingBottom()
-            }
             
         }
     }
+    
 }
+
 
 #Preview {
     SoundLamp()

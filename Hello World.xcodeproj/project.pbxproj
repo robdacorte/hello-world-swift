@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* ColorShuffler.swift */; };
 		0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628646C2A726F380077B6A6 /* PaletteModel.swift */; };
+		0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0691504C2B07E1F500D25120 /* CircleWave.metal */; };
+		069150502B07E27E00D25120 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691504F2B07E27E00D25120 /* Transitions.swift */; };
 		06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */; };
 		06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* SoundLamp.swift */; };
 		06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* DefaultLamp.swift */; };
@@ -28,6 +30,8 @@
 		060637DB2A5473380070B85E /* ColorShuffler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorShuffler.swift; sourceTree = "<group>"; };
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
 		0628646C2A726F380077B6A6 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteModel.swift; sourceTree = "<group>"; };
+		0691504C2B07E1F500D25120 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
+		0691504F2B07E27E00D25120 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableButtonPanel.swift; sourceTree = "<group>"; };
 		06BFC45F2AF2527100608D3F /* SoundLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLamp.swift; sourceTree = "<group>"; };
 		06BFC4612AF252EB00608D3F /* DefaultLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLamp.swift; sourceTree = "<group>"; };
@@ -56,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0691504B2B07E1CC00D25120 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0691504C2B07E1F500D25120 /* CircleWave.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		0691504E2B07E26500D25120 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				0691504F2B07E27E00D25120 /* Transitions.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		06BFC4632AF2532300608D3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +112,8 @@
 		D4EE5BF12A436173009C57A2 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				0691504E2B07E26500D25120 /* Transitions */,
+				0691504B2B07E1CC00D25120 /* Shaders */,
 				D408B32E2B07BD0000A11E5E /* Modifiers */,
 				D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */,
 				060637DD2A5DCB380070B85E /* Hello World.entitlements */,
@@ -190,11 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */,
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
 				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
+				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
 				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
@@ -344,6 +368,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +404,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
