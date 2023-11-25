@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PaddingBottom: ViewModifier {
     func body(content: Content) -> some View {
-            content
+        content
             .padding(.bottom, 60)
-        }
+    }
 }

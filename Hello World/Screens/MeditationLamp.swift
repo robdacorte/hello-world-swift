@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct MeditationLamp: View {
+    @State private var start = Date.now
     var body: some View {
-        Text("Hello, Meditation!")
+        TimelineView(.animation) { timeline in
+            SinusodalView(start: $start, timeline: timeline)
+        }.ignoresSafeArea()
     }
 }
 

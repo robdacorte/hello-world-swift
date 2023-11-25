@@ -20,6 +20,14 @@
 		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
 		D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */; };
 		D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */; };
+		D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */ = {isa = PBXBuildFile; fileRef = D42EAB352B0FD62300071B44 /* Sinusoidal.metal */; };
+		D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */; };
+		D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */; };
+		D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */; };
+		D4DD60962B12180000DB13A1 /* RainbowNoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60952B12180000DB13A1 /* RainbowNoise.swift */; };
+		D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */; };
+		D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60992B121D2500DB13A1 /* YoutubeTutorial.metal */; };
+		D4DD609C2B1224A900DB13A1 /* YoutubeTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */; };
 		D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */; };
 		D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF42A436173009C57A2 /* ContentView.swift */; };
 		D4EE5BF72A436175009C57A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE5BF62A436175009C57A2 /* Assets.xcassets */; };
@@ -41,6 +49,14 @@
 		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
 		D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBottomModifier.swift; sourceTree = "<group>"; };
 		D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthButtonModifier.swift; sourceTree = "<group>"; };
+		D42EAB352B0FD62300071B44 /* Sinusoidal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sinusoidal.metal; sourceTree = "<group>"; };
+		D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusodalView.swift; sourceTree = "<group>"; };
+		D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWavesView.swift; sourceTree = "<group>"; };
+		D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderViewModel.swift; sourceTree = "<group>"; };
+		D4DD60952B12180000DB13A1 /* RainbowNoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowNoise.swift; sourceTree = "<group>"; };
+		D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RainbowNoise.metal; sourceTree = "<group>"; };
+		D4DD60992B121D2500DB13A1 /* YoutubeTutorial.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = YoutubeTutorial.metal; sourceTree = "<group>"; };
+		D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTutorialView.swift; sourceTree = "<group>"; };
 		D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello WorldDebug.entitlements"; sourceTree = "<group>"; };
 		D4EE5BEF2A436173009C57A2 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldApp.swift; sourceTree = "<group>"; };
@@ -64,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				0691504C2B07E1F500D25120 /* CircleWave.metal */,
+				D42EAB352B0FD62300071B44 /* Sinusoidal.metal */,
+				D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */,
+				D4DD60992B121D2500DB13A1 /* YoutubeTutorial.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -93,6 +112,36 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		D4DD608C2B12106B00DB13A1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				06BFC4612AF252EB00608D3F /* DefaultLamp.swift */,
+				06BFC4662AF2570500608D3F /* SettingsView.swift */,
+				06BFC45F2AF2527100608D3F /* SoundLamp.swift */,
+				06BFC4682AF257C100608D3F /* MeditationLamp.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D4DD608D2B12108A00DB13A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4DD608E2B1210B700DB13A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */,
+				D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */,
+				D4DD60952B12180000DB13A1 /* RainbowNoise.swift */,
+				D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D4EE5BE62A436173009C57A2 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +161,9 @@
 		D4EE5BF12A436173009C57A2 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				D4DD608E2B1210B700DB13A1 /* Views */,
+				D4DD608D2B12108A00DB13A1 /* ViewModels */,
+				D4DD608C2B12106B00DB13A1 /* Screens */,
 				0691504E2B07E26500D25120 /* Transitions */,
 				0691504B2B07E1CC00D25120 /* Shaders */,
 				D408B32E2B07BD0000A11E5E /* Modifiers */,
@@ -121,10 +173,6 @@
 				D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */,
 				06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */,
 				D4EE5BF42A436173009C57A2 /* ContentView.swift */,
-				06BFC4612AF252EB00608D3F /* DefaultLamp.swift */,
-				06BFC4662AF2570500608D3F /* SettingsView.swift */,
-				06BFC45F2AF2527100608D3F /* SoundLamp.swift */,
-				06BFC4682AF257C100608D3F /* MeditationLamp.swift */,
 				06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */,
 				060637DB2A5473380070B85E /* ColorShuffler.swift */,
 				0628646C2A726F380077B6A6 /* PaletteModel.swift */,
@@ -212,21 +260,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DD609C2B1224A900DB13A1 /* YoutubeTutorialView.swift in Sources */,
 				0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */,
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
+				D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */,
 				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
+				D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
 				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
+				D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
+				D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */,
+				D4DD60962B12180000DB13A1 /* RainbowNoise.swift in Sources */,
 				D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */,
 				0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */,
+				D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
 				06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */,
 				D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */,
+				D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
