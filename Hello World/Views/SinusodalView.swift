@@ -21,5 +21,6 @@ struct SinusodalView: View {
                 )
             )
         }
+        .ignoresSafeArea()
     }
 }

@@ -17,8 +17,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedView) {
-                DefaultLamp().tag(1)
-                SoundLamp().tag(2)
+                PaletteScreen().tag(1)
+                ShaderScreen().tag(2)
                 MeditationLamp().tag(3)
                 SettingsView().tag(4)
             }

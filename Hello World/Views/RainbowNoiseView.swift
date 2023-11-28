@@ -1,5 +1,5 @@
 //
-//  RainbowNoise.swift
+//  RainbowNoiseView.swift
 //  Hello World
 //
 //  Created by Rob on 25/11/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RainbowNoise: View {
+struct RainbowNoiseView: View {
     @Binding var startTime: Date
     var timeline: TimelineViewDefaultContext
     var body: some View {

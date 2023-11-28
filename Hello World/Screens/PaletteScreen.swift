@@ -1,5 +1,5 @@
 //
-//  DefaultLamp.swift
+//  PaletteScreen.swift
 //  Hello World
 //
 //  Created by Carlos Limonggi on 1/11/23.
@@ -7,28 +7,27 @@
 
 import SwiftUI
 
-struct DefaultLamp: View  {
+struct PaletteScreen: View  {
+    @ObservedObject var vm: PaletteViewModel = PaletteViewModel()
     
-    @ObservedObject private var colorShuffler: ColorShuffler = ColorShuffler()
-    
-    @State private var buttonsArrayView: [ExpandableButtonItem] = Array()
+    @State private var paletteButtons: [ButtonsPanelView.ButtonItem] = []
     
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
                 Rectangle()
-                    .fill(colorShuffler.switchColorAnimation ? colorShuffler.firstColor : colorShuffler.secondColor)
+                    .fill(vm.switchColorAnimation ? vm.firstColor : vm.secondColor)
                     .edgesIgnoringSafeArea(.all)
-                    .animation(.easeInOut(duration: colorShuffler.transitionSpeed), value: colorShuffler.switchColorAnimation)
+                    .animation(.easeInOut(duration: vm.transitionSpeed), value: vm.switchColorAnimation)
                     .onTapGesture {
-                        colorShuffler.togglePower()
+                        vm.togglePower()
                     }
                 VStack{
                     HStack {
                         Button {
-                            colorShuffler.togglePower()
+                            vm.togglePower()
                         } label: {
-                            Image(systemName: colorShuffler.isOn ? "lightbulb.slash.fill" : "lightbulb.max.fill")
+                            Image(systemName: vm.isOn ? "lightbulb.slash.fill" : "lightbulb.max.fill")
                             .padding(1)
                             .foregroundColor(.white)
                             .fontWeight(.bold)
@@ -38,27 +37,27 @@ struct DefaultLamp: View  {
                         
                         Spacer()
                         
-                        if colorShuffler.isOn {
+                        if vm.isOn {
                             Button {
                                 
                                 withAnimation(.easeInOut(duration: 0.2)) {
-                                    colorShuffler.toggleSpeedPicker()
+                                    vm.toggleSpeedPicker()
                                 }
                             } label: {
                                 Image(systemName: "stopwatch")
                                 .padding(1)
-                                .foregroundColor( colorShuffler.isSpeedPickerOn ? .yellow : .gray)
+                                .foregroundColor( vm.isSpeedPickerOn ? .yellow : .gray)
                                 .fontWeight(.bold)
                             }
                             .clipShape(Circle())
                             .buttonStyle(.bordered)
                             
                             Button {
-                                colorShuffler.toggleShuffle()
+                                vm.toggleShuffle()
                             } label: {
                                 Image(systemName: "shuffle")
                                 .padding(1)
-                                .foregroundColor( colorShuffler.isShuffleOn ? .yellow : .gray)
+                                .foregroundColor( vm.isShuffleOn ? .yellow : .gray)
                                 .fontWeight(.bold)
                             }
                             .clipShape(Circle())
@@ -69,12 +68,15 @@ struct DefaultLamp: View  {
                     Spacer()
                     HStack{
                         Spacer()
-                        ExpandableButtonPanelFixed(colorShuffler: colorShuffler)
+                        ButtonsPanelView(
+                            primaryButton: vm.getPrimaryButton(),
+                            secondaryButtons: vm.getSecondaryButtons()
+                        )
                             .padding()
                         
                     }
-                    if colorShuffler.isSpeedPickerOn {
-                            Picker("Choose the transition speed", selection: $colorShuffler.transitionSpeed) {
+                    if vm.isSpeedPickerOn {
+                            Picker("Choose the transition speed", selection: $vm.transitionSpeed) {
                                 Text(".1 s").tag(Double(0.1))
                                 Text(".5 s").tag(Double(0.5))
                                 ForEach(1..<10) { number in
@@ -91,5 +93,5 @@ struct DefaultLamp: View  {
 }
 
 #Preview {
-    DefaultLamp()
+    PaletteScreen()
 }

@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* ColorShuffler.swift */; };
-		0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628646C2A726F380077B6A6 /* PaletteModel.swift */; };
+		060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* PaletteViewModel.swift */; };
+		0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */; };
+		0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED252B161A9B003235B6 /* PalettesEnum.swift */; };
+		0665ED282B1645FC003235B6 /* TestingEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED272B1645FC003235B6 /* TestingEffect.metal */; };
 		0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0691504C2B07E1F500D25120 /* CircleWave.metal */; };
 		069150502B07E27E00D25120 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691504F2B07E27E00D25120 /* Transitions.swift */; };
-		06B9E2052B10E7C90094E723 /* RainbowNoise.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2042B10E7C90094E723 /* RainbowNoise.metal */; };
-		06B9E2072B121D130094E723 /* LightGrid.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2062B121D120094E723 /* LightGrid.metal */; };
-		06B9E2092B1271CF0094E723 /* LabEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2082B1271CF0094E723 /* LabEffect.metal */; };
-		06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */; };
-		06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* SoundLamp.swift */; };
-		06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* DefaultLamp.swift */; };
+		06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* ShaderScreen.swift */; };
+		06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* PaletteScreen.swift */; };
 		06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4642AF2534500608D3F /* View+Ext.swift */; };
 		06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsView.swift */; };
 		06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationLamp.swift */; };
@@ -27,10 +25,10 @@
 		D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */; };
 		D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */; };
 		D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */; };
-		D4DD60962B12180000DB13A1 /* RainbowNoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60952B12180000DB13A1 /* RainbowNoise.swift */; };
+		D4DD60962B12180000DB13A1 /* RainbowNoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60952B12180000DB13A1 /* RainbowNoiseView.swift */; };
 		D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */; };
 		D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60992B121D2500DB13A1 /* YoutubeTutorial.metal */; };
-		D4DD609C2B1224A900DB13A1 /* YoutubeTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */; };
+		D4DD609C2B1224A900DB13A1 /* TestingEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD609B2B1224A900DB13A1 /* TestingEffectView.swift */; };
 		D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */; };
 		D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE5BF42A436173009C57A2 /* ContentView.swift */; };
 		D4EE5BF72A436175009C57A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4EE5BF62A436175009C57A2 /* Assets.xcassets */; };
@@ -38,17 +36,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		060637DB2A5473380070B85E /* ColorShuffler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorShuffler.swift; sourceTree = "<group>"; };
+		060637DB2A5473380070B85E /* PaletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewModel.swift; sourceTree = "<group>"; };
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
-		0628646C2A726F380077B6A6 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteModel.swift; sourceTree = "<group>"; };
+		0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelView.swift; sourceTree = "<group>"; };
+		0665ED252B161A9B003235B6 /* PalettesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettesEnum.swift; sourceTree = "<group>"; };
+		0665ED272B1645FC003235B6 /* TestingEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TestingEffect.metal; sourceTree = SOURCE_ROOT; };
+		0665ED292B164720003235B6 /* Hello-World-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hello-World-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0691504C2B07E1F500D25120 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
 		0691504F2B07E27E00D25120 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
-		06B9E2042B10E7C90094E723 /* RainbowNoise.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RainbowNoise.metal; sourceTree = "<group>"; };
-		06B9E2062B121D120094E723 /* LightGrid.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = LightGrid.metal; sourceTree = "<group>"; };
-		06B9E2082B1271CF0094E723 /* LabEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LabEffect.metal; sourceTree = "<group>"; };
-		06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableButtonPanel.swift; sourceTree = "<group>"; };
-		06BFC45F2AF2527100608D3F /* SoundLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLamp.swift; sourceTree = "<group>"; };
-		06BFC4612AF252EB00608D3F /* DefaultLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLamp.swift; sourceTree = "<group>"; };
+		06BFC45F2AF2527100608D3F /* ShaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderScreen.swift; sourceTree = "<group>"; };
+		06BFC4612AF252EB00608D3F /* PaletteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteScreen.swift; sourceTree = "<group>"; };
 		06BFC4642AF2534500608D3F /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		06BFC4662AF2570500608D3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		06BFC4682AF257C100608D3F /* MeditationLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLamp.swift; sourceTree = "<group>"; };
@@ -59,10 +56,10 @@
 		D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusodalView.swift; sourceTree = "<group>"; };
 		D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWavesView.swift; sourceTree = "<group>"; };
 		D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderViewModel.swift; sourceTree = "<group>"; };
-		D4DD60952B12180000DB13A1 /* RainbowNoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowNoise.swift; sourceTree = "<group>"; };
+		D4DD60952B12180000DB13A1 /* RainbowNoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowNoiseView.swift; sourceTree = "<group>"; };
 		D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RainbowNoise.metal; sourceTree = "<group>"; };
 		D4DD60992B121D2500DB13A1 /* YoutubeTutorial.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = YoutubeTutorial.metal; sourceTree = "<group>"; };
-		D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTutorialView.swift; sourceTree = "<group>"; };
+		D4DD609B2B1224A900DB13A1 /* TestingEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingEffectView.swift; sourceTree = "<group>"; };
 		D4DF3A302A97698400AEED77 /* Hello WorldDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello WorldDebug.entitlements"; sourceTree = "<group>"; };
 		D4EE5BEF2A436173009C57A2 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello_WorldApp.swift; sourceTree = "<group>"; };
@@ -85,7 +82,7 @@
 		0691504B2B07E1CC00D25120 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				06B9E2042B10E7C90094E723 /* RainbowNoise.metal */,
+				0665ED272B1645FC003235B6 /* TestingEffect.metal */,
 				0691504C2B07E1F500D25120 /* CircleWave.metal */,
 				D42EAB352B0FD62300071B44 /* Sinusoidal.metal */,
 				D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */,
@@ -122,9 +119,9 @@
 		D4DD608C2B12106B00DB13A1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				06BFC4612AF252EB00608D3F /* DefaultLamp.swift */,
+				06BFC4612AF252EB00608D3F /* PaletteScreen.swift */,
 				06BFC4662AF2570500608D3F /* SettingsView.swift */,
-				06BFC45F2AF2527100608D3F /* SoundLamp.swift */,
+				06BFC45F2AF2527100608D3F /* ShaderScreen.swift */,
 				06BFC4682AF257C100608D3F /* MeditationLamp.swift */,
 			);
 			path = Screens;
@@ -133,7 +130,9 @@
 		D4DD608D2B12108A00DB13A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				060637DB2A5473380070B85E /* PaletteViewModel.swift */,
 				D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */,
+				0665ED252B161A9B003235B6 /* PalettesEnum.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -141,10 +140,11 @@
 		D4DD608E2B1210B700DB13A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */,
 				D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */,
 				D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */,
-				D4DD60952B12180000DB13A1 /* RainbowNoise.swift */,
-				D4DD609B2B1224A900DB13A1 /* YoutubeTutorialView.swift */,
+				D4DD60952B12180000DB13A1 /* RainbowNoiseView.swift */,
+				D4DD609B2B1224A900DB13A1 /* TestingEffectView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +168,7 @@
 		D4EE5BF12A436173009C57A2 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				0665ED292B164720003235B6 /* Hello-World-Info.plist */,
 				D4DD608E2B1210B700DB13A1 /* Views */,
 				D4DD608D2B12108A00DB13A1 /* ViewModels */,
 				D4DD608C2B12106B00DB13A1 /* Screens */,
@@ -178,11 +179,8 @@
 				060637DD2A5DCB380070B85E /* Hello World.entitlements */,
 				06BFC4632AF2532300608D3F /* Extensions */,
 				D4EE5BF22A436173009C57A2 /* Hello_WorldApp.swift */,
-				06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */,
 				D4EE5BF42A436173009C57A2 /* ContentView.swift */,
 				06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */,
-				060637DB2A5473380070B85E /* ColorShuffler.swift */,
-				0628646C2A726F380077B6A6 /* PaletteModel.swift */,
 				D4EE5BF62A436175009C57A2 /* Assets.xcassets */,
 				D4EE5BF82A436175009C57A2 /* Preview Content */,
 			);
@@ -225,7 +223,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					D4EE5BEE2A436173009C57A2 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -267,29 +265,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4DD609C2B1224A900DB13A1 /* YoutubeTutorialView.swift in Sources */,
+				D4DD609C2B1224A900DB13A1 /* TestingEffectView.swift in Sources */,
 				0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */,
-				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
+				060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */,
 				D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */,
 				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
-				06B9E2052B10E7C90094E723 /* RainbowNoise.metal in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
-				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
-				06B9E2092B1271CF0094E723 /* LabEffect.metal in Sources */,
-				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
+				06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */,
+				0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */,
+				0665ED282B1645FC003235B6 /* TestingEffect.metal in Sources */,
+				06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */,
 				D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */,
+				0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
 				D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */,
-				D4DD60962B12180000DB13A1 /* RainbowNoise.swift in Sources */,
+				D4DD60962B12180000DB13A1 /* RainbowNoiseView.swift in Sources */,
 				D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */,
-				0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */,
 				D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
-				06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */,
 				D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */,
 				D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */,
 			);
@@ -334,6 +331,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -348,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -394,6 +392,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -402,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -417,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Hello World/Hello WorldDebug.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +425,7 @@
 				DEVELOPMENT_TEAM = KKY4465MJH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hello-World-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "this app uses microphone to get music decibels";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Hello World/Hello World.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +463,7 @@
 				DEVELOPMENT_TEAM = KKY4465MJH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hello-World-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "this app uses microphone to get music decibels";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
