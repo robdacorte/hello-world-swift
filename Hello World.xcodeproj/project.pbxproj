@@ -11,6 +11,9 @@
 		0628646D2A726F380077B6A6 /* PaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628646C2A726F380077B6A6 /* PaletteModel.swift */; };
 		0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0691504C2B07E1F500D25120 /* CircleWave.metal */; };
 		069150502B07E27E00D25120 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691504F2B07E27E00D25120 /* Transitions.swift */; };
+		06B9E2052B10E7C90094E723 /* RainbowNoise.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2042B10E7C90094E723 /* RainbowNoise.metal */; };
+		06B9E2072B121D130094E723 /* LightGrid.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2062B121D120094E723 /* LightGrid.metal */; };
+		06B9E2092B1271CF0094E723 /* LabEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06B9E2082B1271CF0094E723 /* LabEffect.metal */; };
 		06BE62122A8D4C48001A9E7F /* ExpandableButtonPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */; };
 		06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* SoundLamp.swift */; };
 		06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* DefaultLamp.swift */; };
@@ -40,6 +43,9 @@
 		0628646C2A726F380077B6A6 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteModel.swift; sourceTree = "<group>"; };
 		0691504C2B07E1F500D25120 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
 		0691504F2B07E27E00D25120 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		06B9E2042B10E7C90094E723 /* RainbowNoise.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RainbowNoise.metal; sourceTree = "<group>"; };
+		06B9E2062B121D120094E723 /* LightGrid.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = LightGrid.metal; sourceTree = "<group>"; };
+		06B9E2082B1271CF0094E723 /* LabEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LabEffect.metal; sourceTree = "<group>"; };
 		06BE62112A8D4C48001A9E7F /* ExpandableButtonPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableButtonPanel.swift; sourceTree = "<group>"; };
 		06BFC45F2AF2527100608D3F /* SoundLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLamp.swift; sourceTree = "<group>"; };
 		06BFC4612AF252EB00608D3F /* DefaultLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLamp.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		0691504B2B07E1CC00D25120 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				06B9E2042B10E7C90094E723 /* RainbowNoise.metal */,
 				0691504C2B07E1F500D25120 /* CircleWave.metal */,
 				D42EAB352B0FD62300071B44 /* Sinusoidal.metal */,
 				D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */,
@@ -265,12 +272,14 @@
 				060637DC2A5473380070B85E /* ColorShuffler.swift in Sources */,
 				D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */,
 				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
+				06B9E2052B10E7C90094E723 /* RainbowNoise.metal in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* SoundLamp.swift in Sources */,
+				06B9E2092B1271CF0094E723 /* LabEffect.metal in Sources */,
 				06BFC4622AF252EB00608D3F /* DefaultLamp.swift in Sources */,
 				D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
