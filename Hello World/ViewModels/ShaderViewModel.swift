@@ -5,7 +5,6 @@
 //  Created by Rob on 25/11/23.
 //
 
-import Foundation
 import SwiftUI
 
 class ShaderViewModel: ObservableObject {
@@ -20,23 +19,19 @@ class ShaderViewModel: ObservableObject {
         case testingEffect
         
         
-        var image: Image {
+        var image: String {
             switch self {
-            case .circleWave:
-                Image(systemName: "circle.circle")
-            case .sinusoidal:
-                Image(systemName: "water.waves")
-            case .rainbowNoise:
-                Image(systemName: "circle.bottomrighthalf.checkered")
-            case .testingEffect:
-                Image(systemName: "testtube.2")
+            case .circleWave:"circle.circle"
+            case .sinusoidal:"water.waves"
+            case .rainbowNoise: "circle.bottomrighthalf.checkered"
+            case .testingEffect:"testtube.2"
             }
         }
     }
     
     
     func getPrimaryButton() -> ButtonsPanelView.ButtonItem {
-        .init(label: Image(systemName: "poweroff")) {
+        .init(systemImageString: "poweroff") {
             print("primary button pressed from Shaders")
         }
     }
@@ -45,7 +40,7 @@ class ShaderViewModel: ObservableObject {
     func getSecondaryButtons() -> [ButtonsPanelView.ButtonItem] {
         var secondaryButtonsArray: [ButtonsPanelView.ButtonItem] = []
         for shader in Shaders.allCases {
-            secondaryButtonsArray.append(.init(label: shader.image, action: {
+            secondaryButtonsArray.append(.init(systemImageString: shader.image, action: {
                 self.selectedShader = shader.self
             }))
         }

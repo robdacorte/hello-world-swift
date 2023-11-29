@@ -92,15 +92,15 @@ class PaletteViewModel: NSObject, ObservableObject {
     }
     
     func getPrimaryButton() -> ButtonsPanelView.ButtonItem {
-        .init(label: Image(systemName: "poweroff")) {
+        .init(systemImageString: "poweroff", action: {
             print("primary button pressed from Palettes")
-        }
+        })
     }
     
     func getSecondaryButtons() -> [ButtonsPanelView.ButtonItem] {
         var secondaryButtonsArray: [ButtonsPanelView.ButtonItem] = []
         for palette in palettes {
-            secondaryButtonsArray.append(.init(label: palette.image, action: {
+            secondaryButtonsArray.append(.init(systemImageString: palette.image, action: {
                 self.selectedPalette = palette
                 print("aquí vamos Everytime")
                 if !self.isOn {
@@ -177,27 +177,15 @@ class PaletteViewModel: NSObject, ObservableObject {
             }
         }
         
-        var image: Image {
+        var image: String {
             switch self {
-            case .off:
-                Image(systemName: "1.lane")
-            case .shadesOfTeal:
-                Image(systemName: "2.lane")
-            case .beach:
-                Image(systemName: "3.lane")
-            case .neonColors:
-                Image(systemName: "4.lane")
-            case .aetherpunk:
-                Image(systemName: "5.lane")
+            case .off: "1.lane"
+            case .shadesOfTeal: "2.lane"
+            case .beach: "3.lane"
+            case .neonColors: "4.lane"
+            case .aetherpunk: "5.lane"
             }
         }
     }
     
 }
-
-
-/*
- a palette has 5 colors
- 
- 
- */

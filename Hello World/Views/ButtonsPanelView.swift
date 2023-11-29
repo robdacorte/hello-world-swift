@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonsPanelView: View {
     struct ButtonItem: Identifiable {
         let id = UUID()
-        let label: Image
+        let systemImageString: String
         var action: (() -> Void)
     }
     
@@ -38,7 +38,7 @@ struct ButtonsPanelView: View {
                             }
                             button.action()
                         }, label: {
-                            button.label
+                            Image(systemName: button.systemImageString)
                                 .frame(width: self.size, height: self.size)
                                 .cornerRadius(self.cornerRadius)
                             
@@ -54,7 +54,7 @@ struct ButtonsPanelView: View {
                 }
                 self.primaryButton.action()
             }, label: {
-                primaryButton.label
+                Image(systemName: primaryButton.systemImageString)
             })
             .frame(width: self.size, height: self.size)
         }
@@ -69,13 +69,13 @@ struct ButtonsPanelView: View {
 
 struct ButtonsPanelView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonsPanelView(primaryButton: ButtonsPanelView.ButtonItem(label: Image(systemName: "poweroff"), action: {
+        ButtonsPanelView(primaryButton: ButtonsPanelView.ButtonItem(systemImageString: "poweroff" , action: {
             print("button off")
         }), secondaryButtons: [
-            ButtonsPanelView.ButtonItem(label: Image(systemName: "photo"), action: {
+            ButtonsPanelView.ButtonItem(systemImageString: "photo", action: {
                 print("button photo")
             }),
-            ButtonsPanelView.ButtonItem(label: Image(systemName: "camera"), action: {
+            ButtonsPanelView.ButtonItem(systemImageString: "camera", action: {
                 print("button camera")
             })
         ])
