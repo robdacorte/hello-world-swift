@@ -22,8 +22,8 @@ struct ShaderScreen: View  {
                         SinusodalView(start: $vm.time, timeline: timeline)
                     case .rainbowNoise:
                         RainbowNoiseView(startTime: $vm.time, timeline: timeline)
-                    case .testingEffect:
-                        TestingEffectView(startTime: $vm.time, timeline: timeline)
+//                    case .testingEffect:
+//                        TestingEffectView(startTime: $vm.time, timeline: timeline)
                     }
                 }
                 VStack(content: {

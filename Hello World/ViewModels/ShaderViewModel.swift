@@ -9,14 +9,14 @@ import SwiftUI
 
 class ShaderViewModel: ObservableObject {
     var time: Date = .now
-    var selectedShader: Shaders = .rainbowNoise
+    var selectedShader: Shaders = .circleWave
     enum Shaders: Identifiable, CaseIterable {
         var id: Self { self }
         
         case circleWave
         case sinusoidal
         case rainbowNoise
-        case testingEffect
+//        case testingEffect
         
         
         var image: String {
@@ -24,7 +24,7 @@ class ShaderViewModel: ObservableObject {
             case .circleWave:"circle.circle"
             case .sinusoidal:"water.waves"
             case .rainbowNoise: "circle.bottomrighthalf.checkered"
-            case .testingEffect:"testtube.2"
+//            case .testingEffect:"testtube.2"
             }
         }
     }

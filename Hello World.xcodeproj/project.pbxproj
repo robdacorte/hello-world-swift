@@ -8,9 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* PaletteViewModel.swift */; };
+		06448AF52B189EC800EA9CA6 /* Diamond.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AEC2B189EC800EA9CA6 /* Diamond.metal */; };
+		06448AF62B189EC800EA9CA6 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AED2B189EC800EA9CA6 /* CircleWave.metal */; };
+		06448AF72B189EC800EA9CA6 /* Pixellate.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AEE2B189EC800EA9CA6 /* Pixellate.metal */; };
+		06448AF82B189EC800EA9CA6 /* DiamondWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AEF2B189EC800EA9CA6 /* DiamondWave.metal */; };
+		06448AF92B189EC800EA9CA6 /* Radial.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AF02B189EC800EA9CA6 /* Radial.metal */; };
+		06448AFA2B189EC800EA9CA6 /* Circle.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AF12B189EC800EA9CA6 /* Circle.metal */; };
+		06448AFB2B189EC800EA9CA6 /* Crosswarp.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AF22B189EC800EA9CA6 /* Crosswarp.metal */; };
+		06448AFC2B189EC800EA9CA6 /* Wind.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AF32B189EC800EA9CA6 /* Wind.metal */; };
+		06448AFD2B189EC800EA9CA6 /* Swirl.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AF42B189EC800EA9CA6 /* Swirl.metal */; };
+		06448B042B189ED600EA9CA6 /* TransitionShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06448AFF2B189ED600EA9CA6 /* TransitionShader.swift */; };
 		0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */; };
 		0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED252B161A9B003235B6 /* PalettesEnum.swift */; };
-		0665ED282B1645FC003235B6 /* TestingEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED272B1645FC003235B6 /* TestingEffect.metal */; };
 		0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0691504C2B07E1F500D25120 /* CircleWave.metal */; };
 		069150502B07E27E00D25120 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691504F2B07E27E00D25120 /* Transitions.swift */; };
 		06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* ShaderScreen.swift */; };
@@ -38,9 +47,18 @@
 /* Begin PBXFileReference section */
 		060637DB2A5473380070B85E /* PaletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewModel.swift; sourceTree = "<group>"; };
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
+		06448AEC2B189EC800EA9CA6 /* Diamond.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Diamond.metal; sourceTree = "<group>"; };
+		06448AED2B189EC800EA9CA6 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
+		06448AEE2B189EC800EA9CA6 /* Pixellate.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Pixellate.metal; sourceTree = "<group>"; };
+		06448AEF2B189EC800EA9CA6 /* DiamondWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DiamondWave.metal; sourceTree = "<group>"; };
+		06448AF02B189EC800EA9CA6 /* Radial.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Radial.metal; sourceTree = "<group>"; };
+		06448AF12B189EC800EA9CA6 /* Circle.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Circle.metal; sourceTree = "<group>"; };
+		06448AF22B189EC800EA9CA6 /* Crosswarp.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Crosswarp.metal; sourceTree = "<group>"; };
+		06448AF32B189EC800EA9CA6 /* Wind.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Wind.metal; sourceTree = "<group>"; };
+		06448AF42B189EC800EA9CA6 /* Swirl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Swirl.metal; sourceTree = "<group>"; };
+		06448AFF2B189ED600EA9CA6 /* TransitionShader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionShader.swift; sourceTree = "<group>"; };
 		0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelView.swift; sourceTree = "<group>"; };
 		0665ED252B161A9B003235B6 /* PalettesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettesEnum.swift; sourceTree = "<group>"; };
-		0665ED272B1645FC003235B6 /* TestingEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TestingEffect.metal; sourceTree = SOURCE_ROOT; };
 		0665ED292B164720003235B6 /* Hello-World-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hello-World-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0691504C2B07E1F500D25120 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
 		0691504F2B07E27E00D25120 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
@@ -79,10 +97,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06448AEB2B189EC800EA9CA6 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				06448AEC2B189EC800EA9CA6 /* Diamond.metal */,
+				06448AED2B189EC800EA9CA6 /* CircleWave.metal */,
+				06448AEE2B189EC800EA9CA6 /* Pixellate.metal */,
+				06448AEF2B189EC800EA9CA6 /* DiamondWave.metal */,
+				06448AF02B189EC800EA9CA6 /* Radial.metal */,
+				06448AF12B189EC800EA9CA6 /* Circle.metal */,
+				06448AF22B189EC800EA9CA6 /* Crosswarp.metal */,
+				06448AF32B189EC800EA9CA6 /* Wind.metal */,
+				06448AF42B189EC800EA9CA6 /* Swirl.metal */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		06448AFE2B189ED600EA9CA6 /* ShaderDescriptions */ = {
+			isa = PBXGroup;
+			children = (
+				06448AFF2B189ED600EA9CA6 /* TransitionShader.swift */,
+			);
+			name = ShaderDescriptions;
+			path = "Hello World/ShaderDescriptions";
+			sourceTree = SOURCE_ROOT;
+		};
 		0691504B2B07E1CC00D25120 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				0665ED272B1645FC003235B6 /* TestingEffect.metal */,
+				06448AEB2B189EC800EA9CA6 /* Transition */,
 				0691504C2B07E1F500D25120 /* CircleWave.metal */,
 				D42EAB352B0FD62300071B44 /* Sinusoidal.metal */,
 				D4DD60972B121B1100DB13A1 /* RainbowNoise.metal */,
@@ -169,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				0665ED292B164720003235B6 /* Hello-World-Info.plist */,
+				06448AFE2B189ED600EA9CA6 /* ShaderDescriptions */,
 				D4DD608E2B1210B700DB13A1 /* Views */,
 				D4DD608D2B12108A00DB13A1 /* ViewModels */,
 				D4DD608C2B12106B00DB13A1 /* Screens */,
@@ -269,24 +313,33 @@
 				0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */,
 				060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */,
 				D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */,
+				06448AF62B189EC800EA9CA6 /* CircleWave.metal in Sources */,
 				D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */,
 				06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */,
 				D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
+				06448AFA2B189EC800EA9CA6 /* Circle.metal in Sources */,
 				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */,
+				06448AF52B189EC800EA9CA6 /* Diamond.metal in Sources */,
 				0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */,
-				0665ED282B1645FC003235B6 /* TestingEffect.metal in Sources */,
 				06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */,
 				D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */,
 				0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */,
+				06448AFB2B189EC800EA9CA6 /* Crosswarp.metal in Sources */,
+				06448AF92B189EC800EA9CA6 /* Radial.metal in Sources */,
 				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
 				D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */,
 				D4DD60962B12180000DB13A1 /* RainbowNoiseView.swift in Sources */,
+				06448AF82B189EC800EA9CA6 /* DiamondWave.metal in Sources */,
+				06448AF72B189EC800EA9CA6 /* Pixellate.metal in Sources */,
 				D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */,
+				06448AFD2B189EC800EA9CA6 /* Swirl.metal in Sources */,
 				D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */,
+				06448B042B189ED600EA9CA6 /* TransitionShader.swift in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
+				06448AFC2B189EC800EA9CA6 /* Wind.metal in Sources */,
 				D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */,
 				D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */,
 			);

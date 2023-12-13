@@ -58,6 +58,8 @@ struct ButtonsPanelView: View {
             })
             .frame(width: self.size, height: self.size)
         }
+        .background(.black)
+        .opacity(0.6)
         .cornerRadius(self.cornerRadius)
         .shadow(radius: 5)
         
