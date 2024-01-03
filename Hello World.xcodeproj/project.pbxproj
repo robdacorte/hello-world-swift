@@ -20,13 +20,15 @@
 		06448B042B189ED600EA9CA6 /* TransitionShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06448AFF2B189ED600EA9CA6 /* TransitionShader.swift */; };
 		0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */; };
 		0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665ED252B161A9B003235B6 /* PalettesEnum.swift */; };
+		0683CD802B33161D00AA61C0 /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683CD7F2B33161D00AA61C0 /* MeditationView.swift */; };
+		0683CD822B33168300AA61C0 /* MeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683CD812B33168300AA61C0 /* MeditationViewModel.swift */; };
 		0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0691504C2B07E1F500D25120 /* CircleWave.metal */; };
 		069150502B07E27E00D25120 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691504F2B07E27E00D25120 /* Transitions.swift */; };
 		06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* ShaderScreen.swift */; };
 		06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* PaletteScreen.swift */; };
 		06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4642AF2534500608D3F /* View+Ext.swift */; };
 		06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsView.swift */; };
-		06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationLamp.swift */; };
+		06BFC4692AF257C100608D3F /* MeditationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationScreen.swift */; };
 		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
 		D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */; };
 		D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */; };
@@ -60,13 +62,15 @@
 		0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelView.swift; sourceTree = "<group>"; };
 		0665ED252B161A9B003235B6 /* PalettesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalettesEnum.swift; sourceTree = "<group>"; };
 		0665ED292B164720003235B6 /* Hello-World-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hello-World-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0683CD7F2B33161D00AA61C0 /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
+		0683CD812B33168300AA61C0 /* MeditationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewModel.swift; sourceTree = "<group>"; };
 		0691504C2B07E1F500D25120 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
 		0691504F2B07E27E00D25120 /* Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		06BFC45F2AF2527100608D3F /* ShaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderScreen.swift; sourceTree = "<group>"; };
 		06BFC4612AF252EB00608D3F /* PaletteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteScreen.swift; sourceTree = "<group>"; };
 		06BFC4642AF2534500608D3F /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		06BFC4662AF2570500608D3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		06BFC4682AF257C100608D3F /* MeditationLamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationLamp.swift; sourceTree = "<group>"; };
+		06BFC4682AF257C100608D3F /* MeditationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationScreen.swift; sourceTree = "<group>"; };
 		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
 		D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBottomModifier.swift; sourceTree = "<group>"; };
 		D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthButtonModifier.swift; sourceTree = "<group>"; };
@@ -165,7 +169,7 @@
 				06BFC4612AF252EB00608D3F /* PaletteScreen.swift */,
 				06BFC4662AF2570500608D3F /* SettingsView.swift */,
 				06BFC45F2AF2527100608D3F /* ShaderScreen.swift */,
-				06BFC4682AF257C100608D3F /* MeditationLamp.swift */,
+				06BFC4682AF257C100608D3F /* MeditationScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				060637DB2A5473380070B85E /* PaletteViewModel.swift */,
+				0683CD812B33168300AA61C0 /* MeditationViewModel.swift */,
 				D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */,
 				0665ED252B161A9B003235B6 /* PalettesEnum.swift */,
 			);
@@ -186,6 +191,7 @@
 				0665ED232B1617BF003235B6 /* ButtonsPanelView.swift */,
 				D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */,
 				D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */,
+				0683CD7F2B33161D00AA61C0 /* MeditationView.swift */,
 				D4DD60952B12180000DB13A1 /* RainbowNoiseView.swift */,
 				D4DD609B2B1224A900DB13A1 /* TestingEffectView.swift */,
 			);
@@ -319,12 +325,14 @@
 				D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */,
 				06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */,
 				06448AFA2B189EC800EA9CA6 /* Circle.metal in Sources */,
-				06BFC4692AF257C100608D3F /* MeditationLamp.swift in Sources */,
+				06BFC4692AF257C100608D3F /* MeditationScreen.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */,
 				06448AF52B189EC800EA9CA6 /* Diamond.metal in Sources */,
+				0683CD822B33168300AA61C0 /* MeditationViewModel.swift in Sources */,
 				0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */,
 				06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */,
+				0683CD802B33161D00AA61C0 /* MeditationView.swift in Sources */,
 				D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */,
 				0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */,
 				06448AFB2B189EC800EA9CA6 /* Crosswarp.metal in Sources */,

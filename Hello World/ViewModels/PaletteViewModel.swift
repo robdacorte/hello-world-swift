@@ -5,9 +5,7 @@
 //  Created by Carlos Limonggi on 4/7/23.
 //
 
-import Foundation
 import SwiftUI
-import Combine
 
 class PaletteViewModel: NSObject, ObservableObject {
     let palettes: [Palettes] = Palettes.allCases
@@ -76,6 +74,7 @@ class PaletteViewModel: NSObject, ObservableObject {
             secondColor = .black
         }
     }
+    
     private func updateCurrentIndex() {
         
         if self.currentIndex == self.selectedPalette.colors.count - 1 {

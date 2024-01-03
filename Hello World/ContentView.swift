@@ -19,7 +19,7 @@ struct ContentView: View {
             TabView(selection: $selectedView) {
                 PaletteScreen().tag(1)
                 ShaderScreen().tag(2)
-                MeditationLamp().tag(3)
+                MeditationScreen().tag(3)
                 SettingsView().tag(4)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))

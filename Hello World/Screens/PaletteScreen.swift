@@ -28,6 +28,7 @@ struct PaletteScreen: View  {
                             vm.togglePower()
                         } label: {
                             Image(systemName: vm.isOn ? "lightbulb.slash.fill" : "lightbulb.max.fill")
+                            .frame(width: 30)
                             .padding(1)
                             .foregroundColor(.white)
                             .fontWeight(.bold)
@@ -45,6 +46,7 @@ struct PaletteScreen: View  {
                                 }
                             } label: {
                                 Image(systemName: "stopwatch")
+                                .frame(width: 30)
                                 .padding(1)
                                 .foregroundColor( vm.isSpeedPickerOn ? .yellow : .gray)
                                 .fontWeight(.bold)
