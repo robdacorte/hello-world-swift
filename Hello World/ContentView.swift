@@ -22,6 +22,9 @@ struct ContentView: View {
                 MeditationScreen().tag(3)
                 SettingsView().tag(4)
             }
+            .sensoryFeedback(.success, trigger: selectedView) { oldValue, newValue in
+                       oldValue != newValue
+                   }
             .tabViewStyle(.page(indexDisplayMode: .never))
 
             VStack {
@@ -53,6 +56,8 @@ struct ContentView: View {
                     .font(.footnote)
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
             }
+            .foregroundColor(.white)
+            .opacity(selectedView == selectedViewId ? 0.4 : 0.8)
         }.tabButtonWidth()
     }
 }

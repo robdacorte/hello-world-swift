@@ -5,6 +5,19 @@
 //  Created by Carlos Limonggi on 28/11/23.
 //
 
+/**
+ TODO:
+ UX side:
+    navigation link names
+    icons like clock and bulb doesn't mean the same in different screens, check consistency
+       navigation bar: increase tolerance*  include haptic
+ 
+ Performance side:
+     memory leaks research
+ 
+ */
+
+
 import SwiftUI
 
 struct ButtonsPanelView: View {
@@ -58,6 +71,7 @@ struct ButtonsPanelView: View {
             })
             .frame(width: self.size, height: self.size)
         }
+        .foregroundColor(.white)
         .background(.black)
         .opacity(0.6)
         .cornerRadius(self.cornerRadius)
