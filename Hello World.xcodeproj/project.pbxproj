@@ -35,6 +35,8 @@
 		D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */; };
 		D408B3322B07C1F000A11E5E /* WidthButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */; };
 		D42EAB362B0FD62300071B44 /* Sinusoidal.metal in Sources */ = {isa = PBXBuildFile; fileRef = D42EAB352B0FD62300071B44 /* Sinusoidal.metal */; };
+		D45E5DAF2B51E199009257D1 /* ocean_waves_loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = D45E5DAE2B51E199009257D1 /* ocean_waves_loop.mov */; };
+		D496F7842B485178000A868E /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496F7832B485178000A868E /* ProgressCircleView.swift */; };
 		D4DD60902B1210C700DB13A1 /* SinusodalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */; };
 		D4DD60922B1211AD00DB13A1 /* CircleWavesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */; };
 		D4DD60942B12124F00DB13A1 /* ShaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */; };
@@ -79,6 +81,8 @@
 		D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBottomModifier.swift; sourceTree = "<group>"; };
 		D408B3312B07C1F000A11E5E /* WidthButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthButtonModifier.swift; sourceTree = "<group>"; };
 		D42EAB352B0FD62300071B44 /* Sinusoidal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sinusoidal.metal; sourceTree = "<group>"; };
+		D45E5DAE2B51E199009257D1 /* ocean_waves_loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ocean_waves_loop.mov; sourceTree = "<group>"; };
+		D496F7832B485178000A868E /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		D4DD608F2B1210C700DB13A1 /* SinusodalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusodalView.swift; sourceTree = "<group>"; };
 		D4DD60912B1211AD00DB13A1 /* CircleWavesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWavesView.swift; sourceTree = "<group>"; };
 		D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +171,14 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		D45E5DAD2B51E177009257D1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D45E5DAE2B51E199009257D1 /* ocean_waves_loop.mov */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		D4DD608C2B12106B00DB13A1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +212,7 @@
 				0683CD7F2B33161D00AA61C0 /* MeditationView.swift */,
 				D4DD60952B12180000DB13A1 /* RainbowNoiseView.swift */,
 				D4DD609B2B1224A900DB13A1 /* TestingEffectView.swift */,
+				D496F7832B485178000A868E /* ProgressCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +236,7 @@
 		D4EE5BF12A436173009C57A2 /* Hello World */ = {
 			isa = PBXGroup;
 			children = (
+				D45E5DAD2B51E177009257D1 /* Assets */,
 				0665ED292B164720003235B6 /* Hello-World-Info.plist */,
 				06448AFE2B189ED600EA9CA6 /* ShaderDescriptions */,
 				D4DD608E2B1210B700DB13A1 /* Views */,
@@ -309,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45E5DAF2B51E199009257D1 /* ocean_waves_loop.mov in Resources */,
 				D4EE5BFA2A436175009C57A2 /* Preview Assets.xcassets in Resources */,
 				D4EE5BF72A436175009C57A2 /* Assets.xcassets in Resources */,
 			);
@@ -335,6 +350,7 @@
 				06BFC4692AF257C100608D3F /* MeditationScreen.swift in Sources */,
 				069150502B07E27E00D25120 /* Transitions.swift in Sources */,
 				06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */,
+				D496F7842B485178000A868E /* ProgressCircleView.swift in Sources */,
 				06448AF52B189EC800EA9CA6 /* Diamond.metal in Sources */,
 				0683CD822B33168300AA61C0 /* MeditationViewModel.swift in Sources */,
 				0665ED242B1617BF003235B6 /* ButtonsPanelView.swift in Sources */,
@@ -491,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hello World/Preview Content\"";
-				DEVELOPMENT_TEAM = KKY4465MJH;
+				DEVELOPMENT_TEAM = UDXEH93L65;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hello-World-Info.plist";
