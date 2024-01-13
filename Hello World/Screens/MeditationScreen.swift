@@ -22,7 +22,7 @@ struct MeditationScreen: View {
                 .ignoresSafeArea()
             ProgressCircleView(model: .init(color: .white,size: vm.isActive ? 200 : 270, percentage: vm.getPercentage(), time: vm.getUpdatedTime()))
                 .padding(.bottom, vm.isActive ? 500 : 0)
-                .animation(.smooth, value: vm.isActive)
+                .animation(.easeIn, value: vm.isActive)
             VStack {
                 VStack {
                     HStack {

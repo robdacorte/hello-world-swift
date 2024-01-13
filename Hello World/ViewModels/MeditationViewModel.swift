@@ -67,7 +67,8 @@ class MeditationViewModel: ObservableObject {
         isActive ? (CGFloat(totalSeconds * 100) / CGFloat(staticTotalSeconds)) / 100 : 0
     }
     
-    @objc private func videoDidFinish(notification: Notification) {
+    @objc 
+    private func videoDidFinish(notification: Notification) {
         if notification.object is AVPlayerItem {
             withAnimation(.smooth) {
                 player.playImmediately(atRate: isPlayerPlayingReverse ? 1.0 : -1.5)
