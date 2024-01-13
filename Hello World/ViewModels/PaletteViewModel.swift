@@ -101,10 +101,8 @@ class PaletteViewModel: NSObject, ObservableObject {
         for palette in palettes {
             secondaryButtonsArray.append(.init(systemImageString: palette.image, action: {
                 self.selectedPalette = palette
-                print("aquí vamos Everytime")
                 if !self.isOn {
                     self.togglePower()
-                    print("aquí vamos inside del if")
                 }
             }))
         }
@@ -113,7 +111,6 @@ class PaletteViewModel: NSObject, ObservableObject {
     }
     
     enum Palettes: Identifiable, CaseIterable {
-        case off
         case shadesOfTeal
         case beach
         case neonColors
@@ -123,7 +120,6 @@ class PaletteViewModel: NSObject, ObservableObject {
         
         var name: String {
             switch self {
-            case .off: return "OFF"
             case .shadesOfTeal: return "Shade of Teal"
             case .beach: return "Beach"
             case .neonColors: return "Neon Colors"
@@ -133,14 +129,6 @@ class PaletteViewModel: NSObject, ObservableObject {
         
         var colors: [Color] {
             switch self {
-            case .off:
-                return [
-                    .black,
-                    .black,
-                    .black,
-                    .black,
-                    .black
-                ]
             case .shadesOfTeal:
                 return [
                     Color(red:178/255, green:216/255, blue:216/255),
@@ -178,7 +166,6 @@ class PaletteViewModel: NSObject, ObservableObject {
         
         var image: String {
             switch self {
-            case .off: "1.lane"
             case .shadesOfTeal: "2.lane"
             case .beach: "3.lane"
             case .neonColors: "4.lane"

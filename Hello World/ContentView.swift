@@ -9,8 +9,8 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    
     @State private var selectedView: Int = 1
+    @ObservedObject var vm: ContentViewModel = ContentViewModel()
     
     private let marginBottom: CGFloat = 60
     
@@ -20,11 +20,15 @@ struct ContentView: View {
                 PaletteScreen().tag(1)
                 ShaderScreen().tag(2)
                 MeditationScreen().tag(3)
-                SettingsView().tag(4)
+                SettingsScreen().tag(4)
             }
-            .sensoryFeedback(.success, trigger: selectedView) { oldValue, newValue in
-                       oldValue != newValue
-                   }
+            .sensoryFeedback(trigger: selectedView) { oldValue, newValue in
+                if (vm.getHapticsOn() && (oldValue != newValue)) {
+                    return .success
+                } else {
+                    return nil
+                }
+            }
             .tabViewStyle(.page(indexDisplayMode: .never))
 
             VStack {

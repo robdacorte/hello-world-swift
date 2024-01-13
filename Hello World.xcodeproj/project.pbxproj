@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060637DB2A5473380070B85E /* PaletteViewModel.swift */; };
+		060E09212B52B89900840699 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E09202B52B89900840699 /* ContentViewModel.swift */; };
+		0615511B2B5002C900EC36A6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0615511A2B5002C900EC36A6 /* SettingsViewModel.swift */; };
 		06448AF52B189EC800EA9CA6 /* Diamond.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AEC2B189EC800EA9CA6 /* Diamond.metal */; };
 		06448AF62B189EC800EA9CA6 /* CircleWave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AED2B189EC800EA9CA6 /* CircleWave.metal */; };
 		06448AF72B189EC800EA9CA6 /* Pixellate.metal in Sources */ = {isa = PBXBuildFile; fileRef = 06448AEE2B189EC800EA9CA6 /* Pixellate.metal */; };
@@ -27,7 +29,7 @@
 		06BFC4602AF2527100608D3F /* ShaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC45F2AF2527100608D3F /* ShaderScreen.swift */; };
 		06BFC4622AF252EB00608D3F /* PaletteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4612AF252EB00608D3F /* PaletteScreen.swift */; };
 		06BFC4652AF2534500608D3F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4642AF2534500608D3F /* View+Ext.swift */; };
-		06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsView.swift */; };
+		06BFC4672AF2570500608D3F /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4662AF2570500608D3F /* SettingsScreen.swift */; };
 		06BFC4692AF257C100608D3F /* MeditationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4682AF257C100608D3F /* MeditationScreen.swift */; };
 		06CCB77D2A73DD050020DE78 /* AudioAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */; };
 		D408B3302B07BD1900A11E5E /* PaddingBottomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		060637DB2A5473380070B85E /* PaletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteViewModel.swift; sourceTree = "<group>"; };
 		060637DD2A5DCB380070B85E /* Hello World.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hello World.entitlements"; sourceTree = "<group>"; };
+		060E09202B52B89900840699 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		0615511A2B5002C900EC36A6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		06448AEC2B189EC800EA9CA6 /* Diamond.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Diamond.metal; sourceTree = "<group>"; };
 		06448AED2B189EC800EA9CA6 /* CircleWave.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = CircleWave.metal; sourceTree = "<group>"; };
 		06448AEE2B189EC800EA9CA6 /* Pixellate.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Pixellate.metal; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		06BFC45F2AF2527100608D3F /* ShaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderScreen.swift; sourceTree = "<group>"; };
 		06BFC4612AF252EB00608D3F /* PaletteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteScreen.swift; sourceTree = "<group>"; };
 		06BFC4642AF2534500608D3F /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
-		06BFC4662AF2570500608D3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		06BFC4662AF2570500608D3F /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		06BFC4682AF257C100608D3F /* MeditationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationScreen.swift; sourceTree = "<group>"; };
 		06CCB77C2A73DD050020DE78 /* AudioAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnalizer.swift; sourceTree = "<group>"; };
 		D408B32F2B07BD1900A11E5E /* PaddingBottomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBottomModifier.swift; sourceTree = "<group>"; };
@@ -167,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				06BFC4612AF252EB00608D3F /* PaletteScreen.swift */,
-				06BFC4662AF2570500608D3F /* SettingsView.swift */,
+				06BFC4662AF2570500608D3F /* SettingsScreen.swift */,
 				06BFC45F2AF2527100608D3F /* ShaderScreen.swift */,
 				06BFC4682AF257C100608D3F /* MeditationScreen.swift */,
 			);
@@ -178,9 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				060637DB2A5473380070B85E /* PaletteViewModel.swift */,
+				060E09202B52B89900840699 /* ContentViewModel.swift */,
 				0683CD812B33168300AA61C0 /* MeditationViewModel.swift */,
 				D4DD60932B12124F00DB13A1 /* ShaderViewModel.swift */,
 				0665ED252B161A9B003235B6 /* PalettesEnum.swift */,
+				0615511A2B5002C900EC36A6 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0615511B2B5002C900EC36A6 /* SettingsViewModel.swift in Sources */,
 				D4DD609C2B1224A900DB13A1 /* TestingEffectView.swift in Sources */,
 				0691504D2B07E1F500D25120 /* CircleWave.metal in Sources */,
 				060637DC2A5473380070B85E /* PaletteViewModel.swift in Sources */,
@@ -337,7 +344,7 @@
 				0665ED262B161A9B003235B6 /* PalettesEnum.swift in Sources */,
 				06448AFB2B189EC800EA9CA6 /* Crosswarp.metal in Sources */,
 				06448AF92B189EC800EA9CA6 /* Radial.metal in Sources */,
-				06BFC4672AF2570500608D3F /* SettingsView.swift in Sources */,
+				06BFC4672AF2570500608D3F /* SettingsScreen.swift in Sources */,
 				D4DD609A2B121D2500DB13A1 /* YoutubeTutorial.metal in Sources */,
 				D4DD60962B12180000DB13A1 /* RainbowNoiseView.swift in Sources */,
 				06448AF82B189EC800EA9CA6 /* DiamondWave.metal in Sources */,
@@ -346,6 +353,7 @@
 				06448AFD2B189EC800EA9CA6 /* Swirl.metal in Sources */,
 				D4DD60982B121B1100DB13A1 /* RainbowNoise.metal in Sources */,
 				06448B042B189ED600EA9CA6 /* TransitionShader.swift in Sources */,
+				060E09212B52B89900840699 /* ContentViewModel.swift in Sources */,
 				D4EE5BF52A436173009C57A2 /* ContentView.swift in Sources */,
 				06448AFC2B189EC800EA9CA6 /* Wind.metal in Sources */,
 				D4EE5BF32A436173009C57A2 /* Hello_WorldApp.swift in Sources */,
